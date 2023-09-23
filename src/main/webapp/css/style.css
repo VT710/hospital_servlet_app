@@ -1,0 +1,29 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+   background-color: #eee;
+   font-family: "poppins", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    min-height: 100vh;
+}
+
+.card
+
+.paint-card {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+} */
+
+.bg-warning{
+	color: black;
+}
