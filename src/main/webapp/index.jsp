@@ -13,7 +13,7 @@
 </head>
 <body>
 <%@include file="component/navbar.jsp"%>
-<h1 class="text-center fs-2">.....WELCOME TO <span class=" fs-1 fw-b text-danger">VIKAS</span> HOSPITAL.....</h1>
+<h1 class="text-center fs-2">.....WELCOME TO <span class=" fs-1 fw-b text-danger">VIKAS THAKUR</span> HOSPITAL.....</h1>
 
 
 	<!-- Photo slider -->
