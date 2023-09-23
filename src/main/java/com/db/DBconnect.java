@@ -9,7 +9,7 @@ public class DBconnect {
 	public static Connection getConn() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","tiger","tiger@123");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","tiger");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
