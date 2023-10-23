@@ -1,33 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page isELIgnored="false"%>
+pageEncoding="UTF-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>VT HOSPITAL</title>
-<%@include file="component/allcss.jsp"%>
-</head>
- <body>
+  <head>
+    <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT HOSPITAL</title>
+    <%@include file="component/allcss.jsp"%>
+  </head>
+  <body>
     <%@include file="component/navbar.jsp"%>
     <div class="user-login-css container flex">
       <div class="user-login-body">
         <div class="card-body card-body-login">
-          <h2>User Registration</h2>
+          <h2>Patient Registration</h2>
 
           <c:if test="${not empty sucMsg}">
-            <p class="text-center text-warning fs-3">${sucMsg}</p>
+            <p class="sucMsg">${sucMsg}</p>
             <c:remove var="sucMsg" scope="session" />
           </c:if>
 
           <c:if test="${not empty errorMsg}">
-            <p class="text-center text-danger fs-3">${errorMsg}</p>
+            <p class="errMsg">${errorMsg}</p>
             <c:remove var="errorMsg" scope="session" />
           </c:if>
 
-          <form action="user_register" method="post">
+          <form action="user_register" method="post" id="form_main">
             <div class="mb-3">
               <div>
                 <label for="fullname" class="form-label">Full Name</label>
@@ -36,19 +35,27 @@
                   type="text"
                   name="fullName"
                   class="form-control"
-                  required
                 />
+                <span
+                  id="nameAlert"
+                  style="
+                    color: red;
+                    padding-left: 4px;
+                    font-weight: 400;
+                    display: none;
+                  "
+                  >Name is required</span
+                >
               </div>
             </div>
             <div class="mb-3">
               <div>
-                <label for="email" class="form-label">Email adress</label>
+                <label for="email" class="form-label">Email address</label>
                 <input
                   id="email"
                   type="email"
                   name="email"
                   class="form-control"
-                  required
                 />
               </div>
             </div>
@@ -60,7 +67,6 @@
                   type="password"
                   name="password"
                   class="form-control"
-                  required
                 />
               </div>
             </div>
@@ -69,8 +75,8 @@
         </div>
       </div>
     </div>
+    <script src="js/patient.js"></script>
 
     <%@include file="component/footer.jsp"%>
   </body>
-
 </html>
