@@ -51,6 +51,7 @@ h1,h2,h3{
 /* navbar start */
 .navbar{
     width: 100%;
+    height: 60px;
     background-color: var(--secondary-bg-color);
  
     font-family: 'Poppins', sans-serif;
@@ -72,10 +73,75 @@ h1,h2,h3{
 }
 
 
+#mob-bar{
+    display: none;
+}
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#mob-bar:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+
+  #mob-bar:checked ~ ul{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: 10;
+    transition: all 0.5s ease;
+    background-color: #13c4d846;
+    height: 100vh;
+    display: inline-block;
+  
+  }
+  #mob-bar:checked ~ ul li{
+    display: block;
+    position: relative;
+    text-align: start;
+    
+  }
+
+  @media (max-width:700px)
+  {
+    .menu-btn{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }
+  }
+  @media (max-width:400px)
+  {
+    .menu-btn{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }
+  }
+  
+  
+
+
+
+
 .nav-item{
     margin: 0 6px;
     display: inline-block;
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    .nav-item {
+       
+        display: inline-block;
+        position: relative;
+        font-size: 10px;
+    }
 }
 
 .nav-item a{
