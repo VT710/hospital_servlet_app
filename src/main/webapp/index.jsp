@@ -19,7 +19,7 @@
       <div class="header-text">
         <h1 class="header-text-text">
           .....WELCOME TO
-          <span class="header-color">VIKAS</span> HOSPITAL.....
+          <span class="header-color">VT</span> HOSPITAL.....
         </h1>
       </div>
     </div>
